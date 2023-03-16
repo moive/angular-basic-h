@@ -1,3 +1,7 @@
 <h1>{{ title }}</h1>
-<button (click)="accumulate(1)">+</button> <span>{{ count }}</span>
-<button (click)="accumulate(-1)">-</button>
+<h3>
+  The base is: <strong>{{ base }}</strong>
+</h3>
+<button (click)="accumulate(base)">+ {{ base }}</button>
+<span>{{ count }}</span>
+<button (click)="accumulate(-base)">- {{ base }}</button>

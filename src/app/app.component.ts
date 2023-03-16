@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Counter app';
-  count = 0;
+  title: string = 'Counter app';
+  count: number = 0;
+  base: number = 5;
 
   accumulate(v: number) {
     this.count += v;

@@ -25,6 +25,11 @@ button {
   margin-left: 5px;
   padding: 5px 10px;
 
+  &[disabled]{
+    cursor: not-allowed;
+    pointer-events: all;
+  }
+
   &:hover {
     background-color: #3e4144;
   }

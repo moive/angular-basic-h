@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   heroes: string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor'];
-  heroDeleted!: string;
+  heroDeleted: string = '';
 
   remoteHero(): void {
     this.heroDeleted = this.heroes.shift() || '';
+    console.log(this.heroDeleted);
   }
 }

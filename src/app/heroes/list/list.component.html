@@ -1,9 +1,12 @@
-<article *ngIf="heroDeleted">
+<article *ngIf="heroDeleted; else noDelete">
   <h3>Hero deleted</h3>
   <span>{{ heroDeleted }}</span>
 </article>
+<ng-template #noDelete>
+  <h3>No item to delete</h3>
+</ng-template>
 
-<button (click)="remoteHero()" [disabled]="heroes.length == 0">Delete</button>
+<button (click)="remoteHero()">Delete</button>
 <article *ngIf="heroes.length > 0">
   <h2>List of heroes</h2>
   <ul>

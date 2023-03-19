@@ -9,8 +9,6 @@ export class ListComponent {
   heroDeleted!: string;
 
   remoteHero(): void {
-    if (this.heroes.length > 0) {
-      this.heroDeleted = this.heroes.shift() || '';
-    }
+    this.heroDeleted = this.heroes.shift() || '';
   }
 }

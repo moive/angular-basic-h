@@ -1,6 +1,7 @@
 <article *ngIf="heroDeleted; else noDelete">
-  <h3>Hero deleted</h3>
-  <span>{{ heroDeleted }}</span>
+  <h3>
+    Hero deleted: <small>{{ heroDeleted }}</small>
+  </h3>
 </article>
 <ng-template #noDelete>
   <h3>No item to delete</h3>

@@ -11,12 +11,25 @@ interface Character {
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent {
+  characters: Character[] = [
+    { name: 'Goku', power: 15000 },
+    { name: 'Vegeta', power: 8500 },
+  ];
+
   newCharacter: Character = {
-    name: 'Trunck',
-    power: 14000,
+    name: ' ',
+    power: 0,
   };
 
   add(): void {
-    console.log(this.newCharacter);
+    if (this.newCharacter.name.trim().length === 0) {
+      return;
+    }
+
+    this.characters.push(this.newCharacter);
+    this.newCharacter = {
+      name: '',
+      power: 0,
+    };
   }
 }

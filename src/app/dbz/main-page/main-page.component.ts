@@ -12,14 +12,4 @@ export class MainPageComponent {
     name: 'Master Roshi',
     power: 1000,
   };
-
-  get characters(): Character[] {
-    return this.dbzService.characters;
-  }
-
-  addNewCharacter(val: Character): void {
-    this.characters.push(val);
-  }
-
-  constructor(private dbzService: DbzService) {}
 }

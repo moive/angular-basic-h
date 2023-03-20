@@ -7,8 +7,12 @@ export class DbzService {
     console.log('Initialized service');
   }
 
-  characters: Character[] = [
+  private _characters: Character[] = [
     { name: 'Goku', power: 15000 },
     { name: 'Vegeta', power: 8500 },
   ];
+
+  get characters(): Character[] {
+    return [...this._characters];
+  }
 }

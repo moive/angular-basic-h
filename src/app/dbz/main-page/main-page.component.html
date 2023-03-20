@@ -18,13 +18,14 @@
       <input
         type="text"
         placeholder="Enter Name"
-        [value]="newCharacter.name"
-        (input)="changeName($event)"
+        name="name"
+        [(ngModel)]="newCharacter.name"
       />
       <input
         type="number"
         placeholder="Enter Power"
-        [value]="newCharacter.power"
+        name="power"
+        [(ngModel)]="newCharacter.power"
       />
       <button type="submit">Add</button>
     </form>

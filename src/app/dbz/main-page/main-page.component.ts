@@ -16,11 +16,7 @@ export class MainPageComponent {
     power: 14000,
   };
 
-  add() {
+  add(): void {
     console.log(this.newCharacter);
-  }
-
-  changeName(e: any) {
-    console.log(e.target.value);
   }
 }

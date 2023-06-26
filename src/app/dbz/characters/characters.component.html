@@ -15,9 +15,18 @@
       'list-group-item-dark': isLast
     }"
   >
-    <span class="text-primary">{{ i + 1 }}</span>
-    <span>{{ c.name }} - </span>
-    <strong>Power: </strong>
-    <span>{{ c.power | number }}</span>
+    <div>
+      <span class="text-primary mx-2">{{ i + 1 }}</span>
+      <span>{{ c.name }} - </span>
+      <span class="fw-bold">Power: </span>
+      <span>{{ c.power | number }}</span>
+    </div>
+    <a
+      href=""
+      (click)="$event.preventDefault(); onDelete(i)"
+      class="text-danger"
+    >
+      <span class="material-symbols-outlined"> delete </span>
+    </a>
   </li>
 </ul>

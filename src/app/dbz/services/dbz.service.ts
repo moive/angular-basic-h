@@ -17,4 +17,8 @@ export class DbzService {
   addCharacter(character: Character): void {
     this._characters.push(character);
   }
+
+  deleteCharacter(index: number): void {
+    this._characters.splice(index, 1);
+  }
 }

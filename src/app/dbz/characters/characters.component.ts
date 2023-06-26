@@ -16,4 +16,8 @@ export class CharactersComponent {
   }
 
   constructor(private dbzService: DbzService) {}
+
+  onDelete(index: number) {
+    this.dbzService.deleteCharacter(index);
+  }
 }
